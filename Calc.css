@@ -1,0 +1,67 @@
+.container{
+   align-items: center;
+   padding: 20px 20px;
+   width: 90%;
+   background:rgb(84, 81, 81);
+   margin: 200px auto;
+    height:fit-content;
+    justify-content: center;
+    border-radius: 20px;
+    max-width: 300px;
+}
+h1 {
+    color: rgb(228, 217, 217);
+    font-family: serif;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+.container input {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 5px;
+    overflow: hidden;
+    background-color: rgb(179, 176, 176);
+    color: rgb(54, 53, 53);
+}
+.container input:before {
+    border: none;
+    background-color: aqua;
+}
+.keys button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-size: 39px;
+    border-style: none;
+    font-weight: bold;
+    align-items: center;
+    cursor: pointer;
+
+}
+.keys button:hover {
+    background-color: rgb(60, 72, 82);
+}
+.keys {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    padding: 1px;
+    gap: 5px;
+}
+.keys button:active {
+    background-color: rgb(8, 125, 227);
+}
+.keys button:nth-child(1),
+.keys button:nth-child(5),
+.keys button:nth-child(9),
+.keys button:nth-child(13),
+.keys button:nth-child(17) {
+    background-color: rgb(158, 226, 80);
+}
