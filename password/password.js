@@ -40,17 +40,12 @@ const password = () => {
         const hasSymbol = checkers.split("").some(char => getPassword.includes(char));
 
         // Check if the ``````````````````````````````````````````````````password contains at least one uppercase letter
-        const hasUppercase = uppercaseString.split("").some(char => getPassword.includes(char));
+        const hasUppercase = uppercaseString.split("").some(char => getPassword.includes(char)); {
 
-        
-            if(hasSymbol){
-                console.log("Partially weak password");
-            } else{
-                console.log("Partially weak password")
+            if(hasSymbol && hasUppercase) {
+                console.log("your password is very strong");
             }
-        
-        else {
-            if (["S", "E", "V", "X"].some(char => getPassword.includes(char))) {
+            else if (["S", "E", "V", "X"].some(char => getPassword.includes(char))) {
                 console.log("Strong password");
             } 
             else if (getPassword.length <= 2) {
