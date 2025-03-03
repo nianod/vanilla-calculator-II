@@ -21,7 +21,6 @@
 // });
 
 
-
 const prompt = require("prompt-sync")();
 
 const myObjects = {
@@ -39,7 +38,7 @@ const password = () => {
         // Check if the password contains at least one symbol
         const hasSymbol = checkers.split("").some(char => getPassword.includes(char));
 
-        // Check if the ``````````````````````````````````````````````````password contains at least one uppercase letter
+        // Check if the password contains at least one uppercase letter
         const hasUppercase = uppercaseString.split("").some(char => getPassword.includes(char)); {
 
             if(hasSymbol && hasUppercase) {
@@ -54,8 +53,8 @@ const password = () => {
             else {
                 console.log("Your password is weak");
             }
-            if(getPassword.toLocaleLowerCase() === "exit"){
-                console.log("Exiting...")
+            if(getPassword.toLowerCase() === "exit"){
+                console.log("Exiting...");
                 break;
             }
         }
@@ -64,4 +63,18 @@ const password = () => {
     
 };
 
+
+hackingPeriod = (password) => {
+    while(true) {
+        const periodTime = prompt("Enter your password degree of stongness:\n A:for your passwrod is very strong\n B:Strong paswword\n C:Your password is weak ");
+        if(periodTime.toLowerCase() === "A" && periodTime !== password) {
+            console.log("Lots of years");
+            
+        } else {
+        console.log("input valid option");
+        
+    }
+} 
+};
+hackingPeriod();
 password();
