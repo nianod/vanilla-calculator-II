@@ -64,17 +64,33 @@ const password = () => {
 };
 
 
-hackingPeriod = (password) => {
-    while(true) {
-        const periodTime = prompt("Enter your password degree of stongness:\n A:for your passwrod is very strong\n B:Strong paswword\n C:Your password is weak ");
-        if(periodTime.toLowerCase() === "A" && periodTime !== password) {
-            console.log("Lots of years");
-            
+const hackingPeriod = (password) => {
+    while (true) {
+        const periodTime = prompt(
+            "Enter your password degree of strength:\n A: Very strong\n B: Strong\n C: Weak"
+        ).toLowerCase(); // Convert input to lowercase for consistency
+        if(periodTime === password) {
+            if (periodTime === "a") {
+                console.log("Your password will take lots of years to crack.");
+                break; // Exit loop
+            } else if (periodTime === "b") {
+                console.log("11 months");
+                break;
+            } else if (periodTime === "c") {
+                console.log("4months");
+                break;
+            } 
+            else {
+                console.log("Invalid input. Please enter A, B, or C.");
+            }
         } else {
-        console.log("input valid option");
-        
+            return periodTime;
+        }
+
+
     }
-} 
 };
-hackingPeriod();
+
+
 password();
+hackingPeriod();
